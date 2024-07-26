@@ -1,0 +1,18 @@
+<div>
+    <h2>Create New Project</h2>
+    <form [formGroup]="projectForm" (ngSubmit)="onSubmit()"> <!--Thanks to Reactive Forms, we bind a FormGroup from our typescript file to this form-->
+        <div>
+          <label for="name">Project Name</label>
+          <input id="name" formControlName="name" /> <!--formControlName represnts the FormControl withing the FormGroup we bound to this form. We are binding input to teamForm's "name" FromControl-->
+        </div>
+        <div>
+          <label for="description">Description</label>
+          <input id="description" formControlName="description" /> <!--We are binding input to teamForm's "description" FromControl-->
+        </div>
+        <button type="submit" [disabled]="validateInput()">Create</button> <!--When this submit button is clicked, it emits a submit event, which in turn triggers onSubmit(). Disabled when no team members have been selected-->
+        <button type="button" (click)="closeEvent()">Cancel</button>       
+    </form>   
+</div>
+       
+       
+

@@ -1,0 +1,30 @@
+<app-navbar></app-navbar>
+<div class="home-announcements-container">
+  <div>
+    <h2>Announcements</h2>
+    <div class="spacing">
+      <button class="create-button" (click)="openForm()" *ngIf="isAdmin">Create Announcement</button>
+    </div>
+  </div>
+  
+  <div *ngIf="announcements.length > 0" class="announcements">
+    <ul>
+      <li *ngFor="let announcement of announcements">
+        <div class="announcements-header">
+          <span class="announcements-name">{{ announcement.author.profile.firstname }} {{ announcement.author.profile.lastname }}</span> 
+          <span class="announcements-date">{{ announcement.date | date:'medium' }}</span>
+        </div>
+        <!-- <a class="announcements-name">{{ announcement.author.profile.firstname }} {{ announcement.author.profile.lastname }}</a> 
+        <a>{{ announcement.date | date:'medium' }}</a> -->
+        <p>{{ announcement.message }}</p>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="announcements.length === 0">
+    <p class="announcements-text"> No announcements available.</p>
+  </div>
+</div>
+
+<div class="popup" *ngIf="showForm"> <!--Popup that appears when showPopup is true, like when above button is clicked-->
+  <app-announcement-form (close)="closeForm()" (announcementCreated)="onAnnouncementCreated()"></app-announcement-form> <!--Close popup when this component sends a (close) event-->
+</div>

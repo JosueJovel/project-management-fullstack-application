@@ -1,0 +1,118 @@
+/*Styling for popup effect*/
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup .popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.projects-overview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  color: #1BA098; 
+
+}
+
+.team-projects-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  color: aliceblue; 
+}
+
+.project-containers {
+  border-bottom: 1px solid #DEB992;
+  margin: 0px 25px;
+  padding: 20px;
+  width: 700px;
+  text-align: left;
+}
+
+.back-button {
+  border: none;
+  background-color: #051622;
+  padding: 20px;
+  color: #1BA098;
+  font-size: large;
+}
+
+.project-title {
+  color: aliceblue;
+  font-size: x-large;
+  margin-right: 10px;
+}
+
+.project-data {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  color: #1BA098;
+  font-size: xx-large;
+  margin: 0;
+}
+
+.selected-members{
+  padding: 2px;
+  background-color: #0B2D45;
+}
+
+
+.list{
+  color:aquamarine;
+}
+
+.list:hover{
+  text-decoration: line-through;
+}
+
+.spacing {
+  display: flex;
+  align-items: end;
+  border-bottom: 1px solid #DEB992;
+  padding: 10px;
+  padding-left: 90%;
+}
+
+.create-button {
+  background-color: #1BA098;
+  color:#ffffff;
+  padding: 6px 12px;
+  border-radius: 10px;
+  border: none;
+}
+
+.project-button{
+  background-color: #DEB992;
+  color:#000000;
+  padding: 6px 12px;
+  border-radius: 10px;
+  border: none;
+}
+
+.color-red {
+  color: red;
+}
+
+.color-green {
+  color: green;
+}

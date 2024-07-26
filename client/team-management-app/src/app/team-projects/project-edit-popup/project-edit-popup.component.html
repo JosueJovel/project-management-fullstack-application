@@ -1,0 +1,23 @@
+<div>
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()"> <!--Thanks to Reactive Forms, we bind a FormGroup from our typescript file to this form-->
+        <div>
+          <label for="name">Project Name:</label>
+          <input id="name" formControlName="name"/> <!--formControlName represnts the FormControl withing the FormGroup we bound to this form. We are binding input to editForm's "name" FromControl-->
+        </div>
+        <div>
+          <label for="description">Description:</label>
+          <input id="description" formControlName="description"/> <!--We are binding input to editForm's "description" FromControl-->
+        </div>
+
+        <div>
+            <label for="active">Active?</label>
+            <!--ngModel BINDS the passed value with changes in the form input, allowing for reactive changing. formControlname simply inserts itself(and its current value) into the input-->
+            <select id="active" formControlName="selectActive"> <!--our form control value will try to match ngValues below to choose the correct option by default-->
+                <option [ngValue]="true">Yes</option> <!--ngValue represents the actual value of the option-->
+                <option [ngValue]="false">No</option>
+              </select>
+        </div>
+        <button type="submit" [disabled]="validateInput()">Save</button> <!--When this submit button is clicked, it emits a submit event, which in turn triggers onSubmit(). Disabled when no team members have been selected-->
+        <button type="button" (click)="closeEvent()">Cancel</button>       
+    </form>   
+</div>

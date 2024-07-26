@@ -1,0 +1,21 @@
+<div>
+  <div class="title">
+    <h1>Cook System</h1>
+  </div>
+
+  <div class="login-container">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <img src="../../assets/images/login_icon.png">
+        <div>
+          <label for="username">email</label>
+          <input class="styled-input" id="username" formControlName="username" type="text" placeholder="email"/>
+        </div>
+        <div>
+          <label for="password">password</label>
+          <input class="styled-input" id="password" formControlName="password" type="password" placeholder="password"/>
+        </div>
+        <button type="submit">LOGIN</button>
+      </form>
+      <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  </div>
+</div>

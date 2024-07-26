@@ -1,0 +1,26 @@
+.select-company-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h2 {
+  color: #1BA098;
+}
+
+select {
+  width: 40%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #5533FF;
+  font-weight: bold;
+}
+
+option {
+  font-weight: bold;
+  font-size: 150%;
+  padding: 10px;
+}

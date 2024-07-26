@@ -1,0 +1,84 @@
+
+.login-container {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 3px solid #DEB992;
+  border-radius: 4px;
+  background-color:#051622;
+  text-align: center;
+  color: #1BA098;
+  box-shadow: 2px 2px 4px #CBCBCB;
+
+}
+
+/* COOK SYSTEMS A FINAL APP */
+.title {
+  margin: 0%;
+  font-family: 'Mulish';
+  margin-top: 10;
+  padding: 20px;
+  font-weight: 10;
+  font-size: 72px;
+  text-align: center;
+
+  color: #1BA098;
+}
+
+.title h1{
+  margin: 0;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  color: #DEB992;
+  background-color: #0D3A59;
+  border: #1BA098;
+}
+
+.styled-input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #1BA098;
+  border-radius: 4px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+
+.login-container img {
+  width: 100%;
+  border-radius: 100px;
+  background-color: #0D3A59;
+}
+  
+.login-container div {
+  margin: 10px;
+}
+  
+.login-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.login-container button {
+  width: 40%;
+  padding: 10px;
+  background-color: #051622;
+  color: white;
+  border: 1px solid #1BA098;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.5s, transform 0.5s;
+}
+
+.login-container button:hover {
+  background-color: #1BA098;
+  transition-duration: 30ms;
+}
+
+.error-message {
+  color: #F24E1E;
+  margin-top: 10px;
+}

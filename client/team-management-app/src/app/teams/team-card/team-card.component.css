@@ -1,0 +1,68 @@
+.team-container {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    background-color: #0B2D45;
+    border-radius: 20px;
+    margin: 25px;
+    cursor: pointer;
+}
+
+.team-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 50px; /*0 Vertical padding, 50px horizontal padding*/
+}
+
+.team-name{
+    font-size: larger;
+    font-weight: 400;
+}
+
+.member-label {
+    padding-top: 20px;
+}
+
+p {
+    margin: 0;
+    color: aliceblue;
+    font-weight: 100;
+}
+
+.team-title {
+    display: flex;
+    justify-content: space-between; /*space between puts in as much space between them as possible, while space evenly focusus on even distribution*/
+    padding: 20px 20px; /*0 Vertical padding, 50px horizontal padding*/
+    color: aliceblue;
+    border-bottom: 1px solid #DEB992;
+}
+
+/*Make team card container flex, row, and give it a certain width of screen, that way they overflow naturally*/
+.team-page {
+    display: flex;
+    flex-direction: row;
+    max-width: 1500px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.team-member-container {
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.team-member-names {
+    width: 150px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    background-color: #1BA098;
+    color: aliceblue;
+    border-radius: 10px;
+}

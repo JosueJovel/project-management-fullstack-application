@@ -1,0 +1,29 @@
+<div>
+  <h2>Create New Team</h2>
+  <form [formGroup]="teamForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label class="textlabel" for="name">Team Name</label>
+      <input class="textfield" id="name" formControlName="name" />
+    </div>
+    <div>
+      <label class="textlabel" for="description">Description</label>
+      <input class="textfield" id="description" formControlName="description" />
+    </div>
+    <button type="submit" [disabled]="validateInput()">Create</button>
+    <button class="cancel-button" type="button" (click)="close.emit()">Cancel</button>
+    <div>
+      <label for="teamMember">Select Team Member</label>
+      <select id="teamMember" formControlName="selectedUser" (change)="selectMember()">
+        <option *ngFor="let user of teamMembers" [ngValue]="user">{{ user.profile.firstname }}</option>
+      </select>
+    </div>
+    <div class="selected-members">
+      <div class="list" *ngFor="let user of selectedMembers" (click)="removeMember(user)">
+        {{ user.profile.firstname }}
+      </div>
+    </div>
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+  </form>
+</div>

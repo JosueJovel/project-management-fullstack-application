@@ -1,0 +1,20 @@
+<div class="team-page">
+    <div class="team-container" *ngFor="let team of listOfTeams" (click)="loadProjects(team)" routerLink="/projects"> <!--Iterating through the lists of teams we fetched from the backend-->
+        <div class="team-title">
+            <p class="team-name">{{team.name}}</p>
+            <p># of Projects: {{projectCounts[team.id]}}</p>
+        </div>
+        <div class="team-body">
+            <p class="member-label">Members</p>
+            <div class="team-member-container">
+                <div class="team-members" *ngFor="let member of team.users"> <!--Iterating through the list of users for the current team-->
+                    <div class="team-member-names">
+                        {{member.profile.firstname}} {{member.profile.lastname[0]}}.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CAN YOU MOVE THE CREATE TEAM CARD COMPONENT HERE? -->
+    <app-create-team-card (close)="closePopup()"></app-create-team-card>
+</div>

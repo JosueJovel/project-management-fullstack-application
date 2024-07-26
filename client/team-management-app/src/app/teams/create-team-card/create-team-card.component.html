@@ -1,0 +1,6 @@
+<div class="new-team-container"> <!--On click: Route to team-creation-popup-->
+    <button class="add-button" (click)="openPopup()">Create a new team</button> <!--Trigger openPopup() on a click event-->
+</div>
+<div class="popup" *ngIf="showCreateTeamPopup"> <!--Popup that appears when showPopup is true, like when above button is clicked-->
+    <app-team-creation-popup (close)="closePopup()"></app-team-creation-popup> <!--Close popup when this component sends a (close) event-->
+</div>

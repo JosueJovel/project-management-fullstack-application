@@ -1,0 +1,30 @@
+<app-navbar></app-navbar>
+<button class="back-button" routerLink="/teams"> &#60; Back</button>
+<div class="projects-overview">
+    <h1>Projects for {{currentTeam.name}}</h1>
+    <div class="spacing">
+        <button class="create-button" *ngIf="isAdmin" (click)="openProjectPopup()">New</button> <!--Trigger openPopup() on a click event-->
+    </div>
+    <div class="popup" *ngIf="showCreateProjectPopup"> <!--Popup that appears when showProjectPopup is true, like when above button is clicked-->
+        <app-project-creation-popup class="popup-content" (close)="closeProjectPopup()"></app-project-creation-popup> <!--Close Project popup when this component sends a (close) event-->
+    </div>
+    
+    
+    <!--On click: Change variable, which makes relevant popup appear. Similar to Create a new team-->
+    <div class="project-containers" *ngFor="let project of teamProjects">
+        
+        <div class="project-status">
+            <a class="project-title">{{project.name}}</a>
+            <a class="color-red" [ngClass]="{'color-green':project.active}">{{projectStatus(project.active)}}</a>
+        </div>
+        <div class="project-data">
+            <a>{{project.description}}</a>
+            <a>
+                <button class="project-button" *ngIf="isAdmin" (click)="openEditProjectPopup(project)">Edit</button>
+            </a> <!--Trigger openPopup() on a click event-->
+        </div>
+    </div>
+    <div class="popup" *ngIf="showEditProjectPopup"> <!--Popup that appears when showEditProjectPopup is true, like when above button is clicked-->
+        <app-project-edit-popup [projectData]="projectData" class="popup-content" (close)="closeEditProjectPopup()"></app-project-edit-popup> <!--Close Project popup when this component sends a (close) event-->
+    </div>
+</div>

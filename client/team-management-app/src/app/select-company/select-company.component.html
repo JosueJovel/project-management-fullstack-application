@@ -1,0 +1,8 @@
+<div class="select-company-container">
+  <h2>Select Company</h2>
+  <select (change)="onSelectCompany($event)">
+    <option value="" disabled selected>Pick an option</option>
+    <option *ngFor="let company of companies" [value]="company.name">{{ company.name }}</option>
+  </select>
+</div>
+  

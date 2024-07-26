@@ -1,0 +1,7 @@
+<app-navbar></app-navbar>
+<h2>Teams</h2>
+<div class="teams-container">
+    <ng-container *ngIf="showTeamCards">
+        <app-team-card (close)="resetTeamCards()"></app-team-card>
+    </ng-container>
+</div>
