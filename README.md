@@ -18,3 +18,10 @@ Angular is used for the front end framework, and Spring Boot is used for the RES
 
 [Figma Wireframe Link](https://www.figma.com/file/huwXGJxW6BCIbk4p2QcZG2/Final-Prototype?type=design&node-id=0-1&mode=design&t=1Ef7iFB5zY6Kjdyb-0)
 
+
+---
+
+## Backend Documentation
+
+[Endpoint Documentation](https://github.com/JosueJovel/project-management-fullstack-application/wiki/Endpoint-Documentation)
+
