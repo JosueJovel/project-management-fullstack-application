@@ -1,8 +1,8 @@
-Project Management Software
+GroupThink
 ===============================
 # Overview
 
-A Full Stack Application for managing teams, users, and projects for companies. Admins may log in, post announcements, create new teams, assign/edit projects, and add new users for a company. Non-admins can view content but cannot make any direct changes for a company.
+GroupThinnk is a Full Stack Application for managing teams, users, and projects for companies. Admins may log in, post announcements, create new teams, assign/edit projects, and add new users for a company. Non-admins can view content but cannot make any direct changes for a company.
 
 Angular is used for the front end framework, and Spring Boot is used for the REST API. PostgreSQL is used for the database. This project was completed as a group effort with other developers in the FastTrack'd program provided by Cook Systems.
 
